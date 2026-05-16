@@ -25,6 +25,7 @@ export default function Hero({ data }: HeroProps) {
           <Link
             href="/projects"
             className="rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+            style={{ color: "#ffffff" }}
           >
             View Projects
           </Link>
