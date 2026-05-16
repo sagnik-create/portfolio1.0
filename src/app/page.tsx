@@ -1,65 +1,103 @@
-import Image from "next/image";
+
+import Link from "next/link";
+import BlogCard from "@/components/BlogCard";
+import Hero from "@/components/Hero";
+import ProjectCard from "@/components/ProjectCard";
+import { getData, getFeaturedBlogs, getFeaturedProjects } from "@/lib/getData";
 
 export default function Home() {
+  const data = getData();
+  const featuredProjects = getFeaturedProjects(3);
+  const featuredBlogs = getFeaturedBlogs(3);
+  const skillGroups = Object.entries(data.skills);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      <Hero data={data} />
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+              Featured Projects
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+              Selected work
+            </h2>
+          </div>
+          <Link className="text-sm font-medium text-slate-900 hover:text-slate-700" href="/projects">
+            View all projects
+          </Link>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="mb-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+            Skills Overview
           </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+            Tools and technologies
+          </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {skillGroups.map(([category, items]) => (
+            <article
+              key={category}
+              className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-semibold capitalize text-slate-950">
+                {category.replace(/_/g, " ")}
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {items.map((item) => (
+                  <span
+                    key={`${category}-${item}`}
+                    className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+              Latest Writing
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+              Blogs and notes
+            </h2>
+          </div>
+          <Link className="text-sm font-medium text-slate-900 hover:text-slate-700" href="/blogs">
+            View all blogs
+          </Link>
+        </div>
+
+        {featuredBlogs.length > 0 ? (
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {featuredBlogs.map((blog) => (
+              <BlogCard key={blog.slug} blog={blog} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-[2rem] border border-dashed border-slate-300 bg-white/80 p-8 text-sm text-slate-600">
+            Add blog content to `src/data/portfolio.json` and it will appear here automatically.
+          </div>
+        )}
+      </section>
+    </main>
   );
 }

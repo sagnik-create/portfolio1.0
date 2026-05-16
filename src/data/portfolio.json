@@ -1,0 +1,167 @@
+{
+  "short_title": {
+    "content": "Building AI-driven applications"
+  },
+  "very_short_bio": {
+    "content": "AI Engineering intern building end-to-end intelligent systems using LLMs, machine learning, and full-stack technologies."
+  },
+  "contact": {
+    "email": "sagnikd587@gmail.com",
+    "github": "https://github.com/sagnik-create",
+    "linkedin": "https://www.linkedin.com/in/sagnikdcodes/",
+    "portfolio": ""
+  },
+  "skills": {
+    "languages": ["Python", "JavaScript", "SQL", "C++"],
+    "frameworks": ["React", "Node.js", "FastAPI"],
+    "ai_ml": ["Machine Learning", "LLMs", "NLP", "Multi-Agent Systems"],
+    "data_engineering": ["Apache Spark"],
+    "tools": ["Git", "Docker", "Google Colab"]
+  },
+  "experience": [
+    {
+      "role": "AI Engineering Intern",
+      "company": "",
+      "duration": "",
+      "description": [
+        "Worked on integrating AI solutions into business workflows",
+        "Designed LLM-based systems",
+        "Contributed to system architecture and deployment"
+      ],
+      "blog": {
+        "title": "",
+        "slug": "",
+        "content": "",
+        "external_url": "",
+        "platform": "medium",
+        "tags": ["AI", "LLM", "Internship"],
+        "date": "",
+        "reading_time": "",
+        "featured": false,
+        "cover_image": ""
+      }
+    }
+  ],
+  "projects": [
+    {
+      "project_name": "Agentic Medical AI Assistant",
+      "tagline": "AI-powered medical report analysis",
+      "description": "Multi-agent AI system for analyzing patient reports.",
+      "tech_stack": ["Python", "LLMs", "NLP"],
+      "features": [
+        "Report simplification",
+        "Risk detection",
+        "Diagnostic insights"
+      ],
+      "github": "",
+      "live_demo": "",
+      "blog": {
+        "title": "",
+        "slug": "",
+        "content": "",
+        "external_url": "",
+        "platform": "medium",
+        "tags": ["AI", "Healthcare", "LLM"],
+        "date": "",
+        "reading_time": "",
+        "featured": false,
+        "cover_image": ""
+      }
+    }
+  ],
+  "blogs": [
+    {
+      "title": "",
+      "slug": "",
+      "content": "",
+      "external_url": "",
+      "platform": "medium",
+      "tags": ["AI", "Engineering"],
+      "date": "",
+      "reading_time": "",
+      "featured": false,
+      "cover_image": "",
+      "related_to": {
+        "type": "project",
+        "name": ""
+      }
+    }
+  ],
+  "leadership": [
+    {
+      "role": "President",
+      "organization": "Toastmasters Club",
+      "description": [
+        "Led communication initiatives",
+        "Organized speaking sessions"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "B.Tech in Computer Science (AI/ML)",
+    "institution": "UEM Jaipur",
+    "additional": "Minor in Cybersecurity"
+  },
+  "goals": {
+    "short_term": "Gain industry experience in AI systems",
+    "long_term": "Build scalable AI + data engineering systems"
+  },
+  "_templates": {
+    "_comment": "Reference templates for adding new entries",
+    "project_template": {
+      "project_name": "string",
+      "tagline": "string",
+      "description": "string",
+      "tech_stack": ["string"],
+      "features": ["string"],
+      "github": "string",
+      "live_demo": "string",
+      "blog": {
+        "title": "string",
+        "slug": "string",
+        "content": "string",
+        "external_url": "string",
+        "platform": "medium | custom",
+        "tags": ["string"],
+        "date": "YYYY-MM-DD",
+        "reading_time": "string",
+        "featured": false,
+        "cover_image": "string"
+      }
+    },
+    "experience_template": {
+      "role": "string",
+      "company": "string",
+      "duration": "string",
+      "description": ["string"],
+      "blog": {
+        "title": "string",
+        "slug": "string",
+        "content": "string",
+        "external_url": "string",
+        "platform": "medium | custom",
+        "tags": ["string"],
+        "date": "YYYY-MM-DD",
+        "reading_time": "string",
+        "featured": false,
+        "cover_image": "string"
+      }
+    },
+    "blog_template": {
+      "title": "string",
+      "slug": "string",
+      "content": "string",
+      "external_url": "string",
+      "platform": "medium | custom",
+      "tags": ["string"],
+      "date": "YYYY-MM-DD",
+      "reading_time": "string",
+      "featured": false,
+      "cover_image": "string",
+      "related_to": {
+        "type": "project | experience | general",
+        "name": "string"
+      }
+    }
+  }
+}
