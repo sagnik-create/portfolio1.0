@@ -1,6 +1,6 @@
 {
   "short_title": {
-    "content": "Building AI-driven applications"
+    "content": "Sagnik's Portfolio"
   },
   "very_short_bio": {
     "content": "AI Engineering intern building end-to-end intelligent systems using LLMs, machine learning, and full-stack technologies."
@@ -12,9 +12,9 @@
     "portfolio": ""
   },
   "skills": {
-    "languages": ["Python", "JavaScript", "SQL", "C++"],
+    "languages": ["Python", "JavaScript", "SQL", "C++", "Java", "Kotlin"],
     "frameworks": ["React", "Node.js", "FastAPI"],
-    "ai_ml": ["Machine Learning", "LLMs", "NLP", "Multi-Agent Systems"],
+    "AI_ML": ["Machine Learning", "LLMs", "NLP", "Multi-Agent Systems"],
     "data_engineering": ["Apache Spark"],
     "tools": ["Git", "Docker", "Google Colab"]
   },
@@ -43,6 +43,31 @@
     }
   ],
   "projects": [
+    {
+      "project_name": "MoodMirror - Sentiment Analysis App",
+      "tagline": "Simple Text Classifier for Sentiment Analysis",
+      "description": "A web app that classifies user input text into sentiments like worry, happiness, or neutral using a fine-tuned LLM.",
+      "tech_stack": ["Python", "LLMs", "Gemini API", "React", "FAST API"],
+      "features": [
+        "Real-time sentiment classification",
+        "User-friendly interface",
+        "Fine-tuned LLM using Logistic Regression for accurate predictions"
+      ],
+      "github": "https://github.com/sagnik-create/MoodMirror",
+      "live_demo": "https://mood-mirror-sand.vercel.app/",
+      "blog": {
+        "title": "",
+        "slug": "",
+        "content": "",
+        "external_url": "",
+        "platform": "medium",
+        "tags": ["AI", "Software Engineering", "LLM"],
+        "date": "",
+        "reading_time": "",
+        "featured": false,
+        "cover_image": ""
+      }
+    },
     {
       "project_name": "Agentic Medical AI Assistant",
       "tagline": "AI-powered medical report analysis",
