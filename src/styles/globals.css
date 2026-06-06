@@ -3,6 +3,13 @@
 :root {
   --background: #f7f7f5;
   --foreground: #0f172a;
+  --primary-color: #ff3a12;
+  --primary-color-dark: #d92e0c;
+  --secondary-color: #020617;
+  --secondary-soft: #fff5eb;
+  --accent-color: #ffd814;
+  --accent-soft: #fff8cc;
+  --border-color: #e2e8f0;
 }
 
 @theme inline {
@@ -23,7 +30,7 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(14, 165, 233, 0.12), transparent 32%),
+    radial-gradient(circle at top, rgba(255, 58, 18, 0.1), transparent 32%),
     linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #f7f7f5 100%);
   color: var(--foreground);
   font-family: var(--font-sans);
@@ -32,4 +39,28 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.profile-avatar {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 9999px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, var(--primary-color), var(--accent-color)) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-avatar--header {
+  width: clamp(2.75rem, 7vw, 3.75rem);
+  height: clamp(2.75rem, 7vw, 3.75rem);
 }

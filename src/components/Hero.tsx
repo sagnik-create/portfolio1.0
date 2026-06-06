@@ -11,7 +11,7 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
       <div className="space-y-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--primary-color)]">
           Portfolio
         </p>
         <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
@@ -24,35 +24,35 @@ export default function Hero({ data }: HeroProps) {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
-            className="rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+            className="rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[var(--primary-color-dark)]"
             style={{ color: "#ffffff" }}
           >
             View Projects
           </Link>
           <Link
             href="/blogs"
-            className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-900 transition hover:border-slate-300 hover:bg-slate-50"
+            className="rounded-full border border-[var(--border-color)] bg-white px-5 py-3 text-sm font-medium text-slate-900 transition hover:border-[var(--accent-color)] hover:bg-[var(--accent-soft)]"
           >
             Read Blogs
           </Link>
         </div>
       </div>
 
-      <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-6 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
+      <div className="rounded-[2rem] border border-[var(--border-color)] bg-gradient-to-br from-white to-[var(--secondary-soft)] p-6 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--secondary-color)]">
           Quick Snapshot
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl bg-slate-950 p-5 text-white">
-            <p className="text-xs uppercase tracking-[0.24em] text-slate-300">
+          <div className="rounded-2xl bg-[var(--secondary-color)] p-5 text-white">
+            <p className="text-xs uppercase tracking-[0.24em] text-[var(--accent-color)]">
               Education
             </p>
             <p className="mt-3 text-lg font-semibold">{data.education.degree}</p>
             <p className="mt-2 text-sm text-slate-300">{data.education.institution}</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-5">
-            <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+          <div className="rounded-2xl border border-[var(--border-color)] bg-white p-5">
+            <p className="text-xs uppercase tracking-[0.24em] text-[var(--secondary-color)]">
               Goal
             </p>
             <p className="mt-3 text-sm leading-6 text-slate-700">
@@ -66,7 +66,7 @@ export default function Hero({ data }: HeroProps) {
             {contactLinks.map((link) => (
               <a
                 key={link.label}
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition hover:border-slate-300 hover:text-slate-950"
+                className="rounded-full border border-[var(--border-color)] bg-white px-4 py-2 text-sm text-slate-700 transition hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
                 href={link.href}
                 target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
