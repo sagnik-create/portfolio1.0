@@ -30,10 +30,12 @@ export default function Hero({ data }: HeroProps) {
             View Projects
           </Link>
           <Link
-            href="/blogs"
+            href="https://drive.google.com/file/d/1FANq9oZabPOaacDXddyX9mx6l-878pQ5/view?usp=drive_link"
             className="rounded-full border border-[var(--border-color)] bg-white px-5 py-3 text-sm font-medium text-slate-900 transition hover:border-[var(--accent-color)] hover:bg-[var(--accent-soft)]"
+            target="_blank"
+            rel="noreferrer"
           >
-            Read Blogs
+            Download Resume
           </Link>
         </div>
       </div>
@@ -52,12 +54,12 @@ export default function Hero({ data }: HeroProps) {
           </div>
 
           <div className="rounded-2xl border border-[var(--border-color)] bg-white p-5">
-            <p className="text-xs uppercase tracking-[0.24em] text-[var(--secondary-color)]">
-              Goal
+            <p className="text-xs uppercase tracking-[0.24em] text-[var(--primary-color)]">
+              Worked on
             </p>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              {data.goals.short_term}
-            </p>
+            <p className="mt-3 text-lg font-semibold">69 repositories</p>
+            <p className="mt-2 text-lg font-semibold">10+ projects</p>
+            <p className="mt-2 text-sm text-slate-500">Based on GitHub stats</p>
           </div>
         </div>
 

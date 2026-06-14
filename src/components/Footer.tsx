@@ -18,7 +18,9 @@ export default function Footer({ title }: FooterProps) {
             Contact
           </p>
           <p className="text-lg font-semibold text-slate-900">{title}</p>
-          <p>Built and maintained by me with Next.js, TypeScript, and Tailwind CSS.</p>
+          <p>Phone: (91) 817 8911 288 
+            <br /> Email: sagnikd587@gmail.com 
+            <br /> Location: Jaipur, Rajasthan</p>
         </div>
 
         <div className="flex flex-wrap gap-4">

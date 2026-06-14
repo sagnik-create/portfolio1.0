@@ -13,7 +13,7 @@
   },
   "skills": {
     "languages": ["Python", "JavaScript", "SQL", "C++", "Java", "Kotlin"],
-    "frameworks": ["React", "Node.js", "FastAPI"],
+    "frameworks": ["React", "Node.js", "FastAPI", "Flask", "Langchain", "Langgraph","Next.js"],
     "AI_ML": ["Machine Learning", "LLMs", "NLP", "Multi-Agent Systems"],
     "data_engineering": ["Apache Spark"],
     "tools": ["Git", "Docker", "Google Colab"]
