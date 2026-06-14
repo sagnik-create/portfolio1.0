@@ -75,6 +75,17 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         <p className="mt-2 text-sm text-slate-500">Related to: {blog.related_to.name}</p>
       ) : null}
 
+      {blog.external_url ? (
+        <a
+          className="mt-6 inline-flex rounded-full bg-slate-950 px-5 py-3 text-sm font-medium !text-white shadow-sm transition hover:bg-slate-800 hover:!text-white"
+          href={blog.external_url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open full blog
+        </a>
+      ) : null}
+
       <div className="mt-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
         <BlogRenderer content={blog.content} />
       </div>

@@ -96,19 +96,19 @@
   ],
   "blogs": [
     {
-      "title": "",
-      "slug": "",
-      "content": "",
-      "external_url": "",
+      "title": "Building a Production-Oriented ML Application (Without Using an LLM)",
+      "slug": "production-ml-system-without-llm",
+      "content": "This project explores building a production-oriented machine learning system without relying on large language models or external AI APIs. Instead of focusing solely on model performance, the system emphasizes real-world engineering challenges such as API design, CPU-bound inference, system scalability, configuration management, and input validation. Built using FastAPI, React, and a traditional ML pipeline, the project highlights how ML behaves inside a live system. It also documents key lessons learned, including handling blocking operations, improving system observability, managing dependencies, and designing for production reliability. This project ultimately shifts the focus from building ML models to building robust, production-ready ML systems.",
+      "external_url": "https://medium.com/@bloggersagnik/building-a-production-oriented-ml-application-without-using-an-llm-dfd7e080db7f",
       "platform": "medium",
-      "tags": ["AI", "Engineering"],
-      "date": "",
-      "reading_time": "",
-      "featured": false,
+      "tags": ["AI", "Machine Learning", "Backend", "Systems Design", "FastAPI"],
+      "date": "2026-06-05",
+      "reading_time": "6 min read",
+      "featured": true,
       "cover_image": "",
       "related_to": {
         "type": "project",
-        "name": ""
+        "name": "Production ML System"
       }
     }
   ],
