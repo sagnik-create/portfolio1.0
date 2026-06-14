@@ -14,7 +14,7 @@ export default function ProjectsPage() {
           Things I&apos;ve built
         </h1>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Every project card and detail page is rendered from `portfolio.json`.
+          Projects across multiple Domains and Technologies
         </p>
       </div>
 
