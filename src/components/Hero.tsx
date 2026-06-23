@@ -30,7 +30,7 @@ export default function Hero({ data }: HeroProps) {
             View Projects
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1FANq9oZabPOaacDXddyX9mx6l-878pQ5/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1ywz26MhtmQaUmwPzg7s0Uhl_h09j-VpS/view?usp=sharing"
             className="rounded-full border border-[var(--border-color)] bg-white px-5 py-3 text-sm font-medium text-slate-900 transition hover:border-[var(--accent-color)] hover:bg-[var(--accent-soft)]"
             target="_blank"
             rel="noreferrer"
