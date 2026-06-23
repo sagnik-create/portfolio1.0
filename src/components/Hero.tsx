@@ -12,7 +12,7 @@ export default function Hero({ data }: HeroProps) {
     <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
       <div className="space-y-6">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--primary-color)]">
-          Portfolio
+          Welcome To
         </p>
         <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
           {data.short_title.content}
